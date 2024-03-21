@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "878419571339",
+    "project_id": "olympika-test",
+    "storage_bucket": "olympika-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878419571339:android:4cbc7559eff1e9a53f9a8e",
+        "android_client_info": {
+          "package_name": "com.oneclue.olympika"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "1111"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

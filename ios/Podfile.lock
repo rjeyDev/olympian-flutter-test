@@ -1,0 +1,601 @@
+PODS:
+  - AdColony (4.9.0)
+  - Amplitude (8.16.1):
+    - AnalyticsConnector (~> 1.0.0)
+  - amplitude_flutter (0.0.1):
+    - Amplitude (= 8.16.1)
+    - Flutter
+  - AnalyticsConnector (1.0.3)
+  - APDAdColonyAdapter (3.1.3.0-beta.2):
+    - AdColony (= 4.9.0)
+    - Appodeal (= 3.1.3-beta.2)
+  - APDBidMachineAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - BidMachine (= 2.2.0.0)
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+  - APDGoogleAdMobAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - Google-Mobile-Ads-SDK (= 10.5.0)
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+  - APDIABAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+  - APDIronSourceAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - IronSourceSDK (= 7.3.0)
+  - APDMetaAudienceNetworkAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - FBAudienceNetwork (= 6.12.0)
+  - APDMyTargetAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - myTargetSDK (~> 5.17.5)
+  - APDStackAnalyticsAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - StackAnalytics (~> 1.4.0)
+    - StackIAB (~> 2.2.1)
+    - StackModules (~> 1.5.0)
+  - APDUnityAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - UnityAds (= 4.7.1)
+  - APDVungleAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - VungleAds (= 7.0.0)
+  - APDYandexAdapter (3.1.3.0-beta.2):
+    - Appodeal (= 3.1.3-beta.2)
+    - YandexMobileAds (= 5.2.1)
+  - appmetrica_plugin (1.4.0):
+    - Flutter
+    - YandexMobileMetrica (~> 4.4)
+  - Appodeal (3.1.3-beta.2):
+    - Protobuf
+    - StackConsentManager (~> 1.2.0)
+    - StackIAB (~> 2.2.1)
+    - StackModules (~> 1.5.0)
+    - StackProtobuf (~> 0.8.0)
+  - audio_session (0.0.1):
+    - Flutter
+  - BidMachine (2.2.0.0):
+    - BidMachine/Core (= 2.2.0.0)
+  - BidMachine/ApiCore (2.2.0.0)
+  - BidMachine/BiddingCore (2.2.0.0):
+    - BidMachine/ApiCore
+    - StackIAB (~> 2.2.1)
+    - StackModules (~> 1.5.1)
+  - BidMachine/Core (2.2.0.0):
+    - BidMachine/ApiCore
+    - BidMachine/BiddingCore
+    - BidMachine/ModulesCore
+  - BidMachine/ModulesCore (2.2.0.0):
+    - BidMachine/ApiCore
+  - BidMachineMetaAudienceAdapter (2.2.0.0):
+    - BidMachine (~> 2.2.0.0)
+    - FBAudienceNetwork (= 6.12.0)
+  - BidMachineMyTargetAdapter (2.2.0.0):
+    - BidMachine (~> 2.2.0.0)
+    - myTargetSDK (= 5.17.5)
+  - BidMachineVungleAdapter (2.2.0.0):
+    - BidMachine (~> 2.2.0.0)
+    - VungleAds (= 7.0.0)
+  - device_info_plus (0.0.1):
+    - Flutter
+  - FBAudienceNetwork (6.12.0)
+  - Firebase/Analytics (10.12.0):
+    - Firebase/Core
+  - Firebase/Core (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 10.12.0)
+  - Firebase/CoreOnly (10.12.0):
+    - FirebaseCore (= 10.12.0)
+  - Firebase/Crashlytics (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 10.12.0)
+  - Firebase/RemoteConfig (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseRemoteConfig (~> 10.12.0)
+  - firebase_analytics (10.4.5):
+    - Firebase/Analytics (= 10.12.0)
+    - firebase_core
+    - Flutter
+  - firebase_core (2.15.1):
+    - Firebase/CoreOnly (= 10.12.0)
+    - Flutter
+  - firebase_crashlytics (3.3.5):
+    - Firebase/Crashlytics (= 10.12.0)
+    - firebase_core
+    - Flutter
+  - firebase_remote_config (3.0.15):
+    - Firebase/RemoteConfig (= 10.12.0)
+    - firebase_core
+    - Flutter
+  - FirebaseABTesting (10.20.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseAnalytics (10.12.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.12.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.12.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseCore (10.12.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreExtension (10.20.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.20.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseCrashlytics (10.12.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseInstallations (~> 10.0)
+    - FirebaseSessions (~> 10.5)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.8)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (~> 2.1)
+  - FirebaseInstallations (10.20.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseRemoteConfig (10.12.0):
+    - FirebaseABTesting (~> 10.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseSessions (10.20.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseCoreExtension (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.10)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesSwift (~> 2.1)
+  - Flutter (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Google-Mobile-Ads-SDK (10.5.0):
+    - GoogleAppMeasurement (< 11.0, >= 7.0)
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleAppMeasurement (10.12.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.12.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.12.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleDataTransport (9.3.0):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUserMessagingPlatform (2.1.0)
+  - GoogleUtilities (7.12.0):
+    - GoogleUtilities/AppDelegateSwizzler (= 7.12.0)
+    - GoogleUtilities/Environment (= 7.12.0)
+    - GoogleUtilities/ISASwizzler (= 7.12.0)
+    - GoogleUtilities/Logger (= 7.12.0)
+    - GoogleUtilities/MethodSwizzler (= 7.12.0)
+    - GoogleUtilities/Network (= 7.12.0)
+    - "GoogleUtilities/NSData+zlib (= 7.12.0)"
+    - GoogleUtilities/Reachability (= 7.12.0)
+    - GoogleUtilities/SwizzlerTestHelpers (= 7.12.0)
+    - GoogleUtilities/UserDefaults (= 7.12.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.12.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.12.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/ISASwizzler (7.12.0)
+  - GoogleUtilities/Logger (7.12.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.12.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.12.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.12.0)"
+  - GoogleUtilities/Reachability (7.12.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/SwizzlerTestHelpers (7.12.0):
+    - GoogleUtilities/MethodSwizzler
+  - GoogleUtilities/UserDefaults (7.12.0):
+    - GoogleUtilities/Logger
+  - in_app_purchase_storekit (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - in_app_review (0.2.0):
+    - Flutter
+  - IronSourceSDK (7.3.0.0)
+  - just_audio (0.0.1):
+    - Flutter
+  - myTargetSDK (5.17.5):
+    - myTrackerSDK (~> 3.0.3)
+  - myTrackerSDK (3.0.8)
+  - nanopb (2.30909.1):
+    - nanopb/decode (= 2.30909.1)
+    - nanopb/encode (= 2.30909.1)
+  - nanopb/decode (2.30909.1)
+  - nanopb/encode (2.30909.1)
+  - OMSDK_Appodeal (1.4.2.0)
+  - onesignal_flutter (5.1.0):
+    - Flutter
+    - OneSignalXCFramework (= 5.1.0)
+  - OneSignalXCFramework (5.1.0):
+    - OneSignalXCFramework/OneSignalComplete (= 5.1.0)
+  - OneSignalXCFramework/OneSignal (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalExtension
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalOutcomes
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalComplete (5.1.0):
+    - OneSignalXCFramework/OneSignal
+    - OneSignalXCFramework/OneSignalInAppMessages
+    - OneSignalXCFramework/OneSignalLocation
+  - OneSignalXCFramework/OneSignalCore (5.1.0)
+  - OneSignalXCFramework/OneSignalExtension (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalInAppMessages (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalOutcomes
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalLocation (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalUser
+  - OneSignalXCFramework/OneSignalNotifications (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalExtension
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalOSCore (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+  - OneSignalXCFramework/OneSignalOutcomes (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+  - OneSignalXCFramework/OneSignalUser (5.1.0):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalNotifications
+    - OneSignalXCFramework/OneSignalOSCore
+    - OneSignalXCFramework/OneSignalOutcomes
+  - package_info_plus (0.4.5):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - PromisesObjC (2.3.1)
+  - PromisesSwift (2.3.1):
+    - PromisesObjC (= 2.3.1)
+  - Protobuf (3.25.2)
+  - sqflite (0.0.3):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - stack_appodeal_flutter (3.1.3-beta.3):
+    - Appodeal (= 3.1.3-beta.2)
+    - Flutter
+  - StackAnalytics (1.4.3):
+    - StackAnalytics/Full (= 1.4.3)
+    - StackModules (~> 1.5.0)
+  - StackAnalytics/Base (1.4.3):
+    - StackModules (~> 1.5.0)
+  - StackAnalytics/Crashes (1.4.3):
+    - StackModules (~> 1.5.0)
+  - StackAnalytics/Full (1.4.3):
+    - StackAnalytics/Base
+    - StackAnalytics/Crashes
+    - StackModules (~> 1.5.0)
+  - StackConsentManager (1.2.6)
+  - StackIAB (2.2.3):
+    - StackIAB/StackIABAssets (= 2.2.3)
+    - StackIAB/StackMRAIDKit (= 2.2.3)
+    - StackIAB/StackNASTKit (= 2.2.3)
+    - StackIAB/StackOpenMeasure (= 2.2.3)
+    - StackIAB/StackRichMedia (= 2.2.3)
+    - StackIAB/StackVASTAssets (= 2.2.3)
+    - StackIAB/StackVASTKit (= 2.2.3)
+    - StackIAB/StackVideoPlayer (= 2.2.3)
+    - StackIAB/StackXML (= 2.2.3)
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackIABAssets (2.2.3):
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackMRAIDKit (2.2.3):
+    - StackIAB/StackIABAssets
+    - StackIAB/StackOpenMeasure
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackNASTKit (2.2.3):
+    - StackIAB/StackVASTKit
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackOpenMeasure (2.2.3):
+    - OMSDK_Appodeal (~> 1.4.2.0)
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackRichMedia (2.2.3):
+    - StackIAB/StackIABAssets
+    - StackIAB/StackVASTAssets
+    - StackIAB/StackVideoPlayer
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackVASTAssets (2.2.3):
+    - StackIAB/StackIABAssets
+    - StackIAB/StackXML
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackVASTKit (2.2.3):
+    - StackIAB/StackMRAIDKit
+    - StackIAB/StackVASTAssets
+    - StackIAB/StackVideoPlayer
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackVideoPlayer (2.2.3):
+    - StackModules (~> 1.5.0)
+  - StackIAB/StackXML (2.2.3):
+    - StackModules (~> 1.5.0)
+  - StackModules (1.5.6):
+    - StackModules/StackProductPresentation (= 1.5.6)
+  - StackModules/StackFoundation (1.5.6)
+  - StackModules/StackProductPresentation (1.5.6):
+    - StackModules/StackUIKit
+  - StackModules/StackUIKit (1.5.6):
+    - StackModules/StackFoundation
+  - StackProtobuf (0.8.5):
+    - Protobuf (~> 3.13)
+  - UnityAds (4.7.1)
+  - url_launcher_ios (0.0.1):
+    - Flutter
+  - VungleAds (7.0.0)
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+  - YandexMobileAds (5.2.1):
+    - YandexMobileAds/Static (= 5.2.1)
+  - YandexMobileAds/Static (5.2.1):
+    - YandexMobileMetrica (< 5.0.0, >= 4.0.0)
+  - YandexMobileMetrica (4.5.2):
+    - YandexMobileMetrica/Static (= 4.5.2)
+  - YandexMobileMetrica/Static (4.5.2):
+    - YandexMobileMetrica/Static/Core (= 4.5.2)
+    - YandexMobileMetrica/Static/Crashes (= 4.5.2)
+  - YandexMobileMetrica/Static/Core (4.5.2)
+  - YandexMobileMetrica/Static/Crashes (4.5.2):
+    - YandexMobileMetrica/Static/Core
+
+DEPENDENCIES:
+  - amplitude_flutter (from `.symlinks/plugins/amplitude_flutter/ios`)
+  - APDAdColonyAdapter (= 3.1.3.0-beta.2)
+  - APDBidMachineAdapter (= 3.1.3.0-beta.2)
+  - APDGoogleAdMobAdapter (= 3.1.3.0-beta.2)
+  - APDIABAdapter (= 3.1.3.0-beta.2)
+  - APDIronSourceAdapter (= 3.1.3.0-beta.2)
+  - APDMetaAudienceNetworkAdapter (= 3.1.3.0-beta.2)
+  - APDMyTargetAdapter (= 3.1.3.0-beta.2)
+  - APDStackAnalyticsAdapter (= 3.1.3.0-beta.2)
+  - APDUnityAdapter (= 3.1.3.0-beta.2)
+  - APDVungleAdapter (= 3.1.3.0-beta.2)
+  - APDYandexAdapter (= 3.1.3.0-beta.2)
+  - appmetrica_plugin (from `.symlinks/plugins/appmetrica_plugin/ios`)
+  - audio_session (from `.symlinks/plugins/audio_session/ios`)
+  - BidMachineMetaAudienceAdapter (~> 2.2.0.0)
+  - BidMachineMyTargetAdapter (~> 2.2.0.0)
+  - BidMachineVungleAdapter (~> 2.2.0.0)
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
+  - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
+  - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
+  - firebase_crashlytics (from `.symlinks/plugins/firebase_crashlytics/ios`)
+  - firebase_remote_config (from `.symlinks/plugins/firebase_remote_config/ios`)
+  - Flutter (from `Flutter`)
+  - in_app_purchase_storekit (from `.symlinks/plugins/in_app_purchase_storekit/darwin`)
+  - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
+  - just_audio (from `.symlinks/plugins/just_audio/ios`)
+  - onesignal_flutter (from `.symlinks/plugins/onesignal_flutter/ios`)
+  - OneSignalXCFramework (< 6.0, >= 5.0.0)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - stack_appodeal_flutter (from `.symlinks/plugins/stack_appodeal_flutter/ios`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+
+SPEC REPOS:
+  https://github.com/appodeal/CocoaPods.git:
+    - APDAdColonyAdapter
+    - APDBidMachineAdapter
+    - APDGoogleAdMobAdapter
+    - APDIABAdapter
+    - APDIronSourceAdapter
+    - APDMetaAudienceNetworkAdapter
+    - APDMyTargetAdapter
+    - APDStackAnalyticsAdapter
+    - APDUnityAdapter
+    - APDVungleAdapter
+    - APDYandexAdapter
+    - BidMachine
+    - BidMachineMetaAudienceAdapter
+    - BidMachineMyTargetAdapter
+    - BidMachineVungleAdapter
+    - StackAnalytics
+  trunk:
+    - AdColony
+    - Amplitude
+    - AnalyticsConnector
+    - Appodeal
+    - FBAudienceNetwork
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebaseRemoteConfig
+    - FirebaseSessions
+    - FMDB
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - IronSourceSDK
+    - myTargetSDK
+    - myTrackerSDK
+    - nanopb
+    - OMSDK_Appodeal
+    - OneSignalXCFramework
+    - PromisesObjC
+    - PromisesSwift
+    - Protobuf
+    - StackConsentManager
+    - StackIAB
+    - StackModules
+    - StackProtobuf
+    - UnityAds
+    - VungleAds
+    - YandexMobileAds
+    - YandexMobileMetrica
+
+EXTERNAL SOURCES:
+  amplitude_flutter:
+    :path: ".symlinks/plugins/amplitude_flutter/ios"
+  appmetrica_plugin:
+    :path: ".symlinks/plugins/appmetrica_plugin/ios"
+  audio_session:
+    :path: ".symlinks/plugins/audio_session/ios"
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
+  firebase_analytics:
+    :path: ".symlinks/plugins/firebase_analytics/ios"
+  firebase_core:
+    :path: ".symlinks/plugins/firebase_core/ios"
+  firebase_crashlytics:
+    :path: ".symlinks/plugins/firebase_crashlytics/ios"
+  firebase_remote_config:
+    :path: ".symlinks/plugins/firebase_remote_config/ios"
+  Flutter:
+    :path: Flutter
+  in_app_purchase_storekit:
+    :path: ".symlinks/plugins/in_app_purchase_storekit/darwin"
+  in_app_review:
+    :path: ".symlinks/plugins/in_app_review/ios"
+  just_audio:
+    :path: ".symlinks/plugins/just_audio/ios"
+  onesignal_flutter:
+    :path: ".symlinks/plugins/onesignal_flutter/ios"
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
+  stack_appodeal_flutter:
+    :path: ".symlinks/plugins/stack_appodeal_flutter/ios"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
+
+SPEC CHECKSUMS:
+  AdColony: af8b7414f317641e0e1e9d23a7b739879e40e4b9
+  Amplitude: fe18b3bbd880f2d9174b8109b79a77cd67687e2d
+  amplitude_flutter: 6216e64320d2dbe4e5be2764381d93280499211f
+  AnalyticsConnector: a53214d38ae22734c6266106c0492b37832633a9
+  APDAdColonyAdapter: 21766b5884b3d09a19f10a6182ea2ddef863fbe7
+  APDBidMachineAdapter: 5f0288cd62012b2f9822f25376d19d032bfc52fe
+  APDGoogleAdMobAdapter: 89ee1e48d5423a1e95c237af174ccaf5881efd51
+  APDIABAdapter: eade9637a03a4c0276d7587eccc087c32e880b75
+  APDIronSourceAdapter: e7017ef0bd314ac97fbfe0ff091d52d389cb2c8d
+  APDMetaAudienceNetworkAdapter: 4f37c66a9499c16af6d52d70b5933454c60170a5
+  APDMyTargetAdapter: f92488a1a3e1791600d3c8a7d7db9a0a70336e0b
+  APDStackAnalyticsAdapter: 808eff5882092513e16e21b670aaa5cf57f5423f
+  APDUnityAdapter: 5957cfa3dbe00aefc527468763a3bdc36fe37312
+  APDVungleAdapter: f87a07c80f03422a121748821715c58fb78206fc
+  APDYandexAdapter: 6b4214f218fd5ac175ce096ea0340cd2c117683c
+  appmetrica_plugin: b0478d4c863b48972294e26a2d5d1db8d30a9a2d
+  Appodeal: cc0793ab38817046f764c39930b4bb9447cd7357
+  audio_session: 4f3e461722055d21515cf3261b64c973c062f345
+  BidMachine: 7b591a5c5e6f6eaa9552e58aa6ab7283ec67e9ee
+  BidMachineMetaAudienceAdapter: 4c05de027b22184055b54f330fff34e7beef815e
+  BidMachineMyTargetAdapter: 395d3d9a849da3c3694b5c4845ceac8f1817cb76
+  BidMachineVungleAdapter: f75d495713df8c446f09522cac8e5ec92bb4f5be
+  device_info_plus: 7545d84d8d1b896cb16a4ff98c19f07ec4b298ea
+  FBAudienceNetwork: e0fcc9091fced34910ed0b6da06f129db46ac9e6
+  Firebase: 07150e75d142fb9399f6777fa56a187b17f833a0
+  firebase_analytics: 3bdcd8b68b7b8ccf28bbcdcfb994309f6232f873
+  firebase_core: 4a3246a02f828a01c74a2c26427037786d90f17f
+  firebase_crashlytics: df144edf7d04ace42beb3a3e29d825bfa49dd04b
+  firebase_remote_config: e60c17e1f825fc0ef8c4891b47b6025e182c25e3
+  FirebaseABTesting: 1d5d49804bcfc5fa782bc2491a8c1364e2cf7241
+  FirebaseAnalytics: 0270389efbe3022b54ec4588862dabec3477ee98
+  FirebaseCore: f86a1394906b97ac445ae49c92552a9425831bed
+  FirebaseCoreExtension: 0659f035b88c5a7a15a9763c48c2e6ca8c0a2977
+  FirebaseCoreInternal: efeeb171ac02d623bdaefe121539939821e10811
+  FirebaseCrashlytics: c4d111b7430c49744c74bcc6346ea00868661ac8
+  FirebaseInstallations: 558b1da7d65afeb996fd5c814332f013234ece4e
+  FirebaseRemoteConfig: bc7f260e6596956fafbb532443c19bd3c30f5258
+  FirebaseSessions: 2f348975f6d1c139231c180e12194161da2e0cd6
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Google-Mobile-Ads-SDK: d4846d2d9bfe840ad7444078b5f9f565032bd4c2
+  GoogleAppMeasurement: 2d800fab85e7848b1e66a6f8ce5bca06c5aad892
+  GoogleDataTransport: 57c22343ab29bc686febbf7cbb13bad167c2d8fe
+  GoogleUserMessagingPlatform: dce302b8f1b84d6e945812ee7a15c3f65a102cbf
+  GoogleUtilities: 0759d1a57ebb953965c2dfe0ba4c82e95ccc2e34
+  in_app_purchase_storekit: 4fb7ee9e824b1f09107fbfbbce8c4b276366dc43
+  in_app_review: 318597b3a06c22bb46dc454d56828c85f444f99d
+  IronSourceSDK: 70d098472ea63fa8d58e47ad79ad761ad256ce15
+  just_audio: baa7252489dbcf47a4c7cc9ca663e9661c99aafa
+  myTargetSDK: a4e52b626e687f7be32dce62ebc7339665dab296
+  myTrackerSDK: df675bf18db63d9a426bd00d6c3dec4ba4bea57e
+  nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
+  OMSDK_Appodeal: c3e648a353665dc4c0a8235d6e7efa66b8277ab5
+  onesignal_flutter: 419a224915bbc03181d176a3cb507a88e64af92f
+  OneSignalXCFramework: 72a6dbc5d97b7eba09a51837f7858d8957ac2629
+  package_info_plus: fd030dabf36271f146f1f3beacd48f564b0f17f7
+  path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
+  PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  PromisesSwift: 28dca69a9c40779916ac2d6985a0192a5cb4a265
+  Protobuf: 34db13339da0d02d64fa8a2ac6a124cfcc603703
+  sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
+  stack_appodeal_flutter: abb330c2bee5a80d7ac1fd3cc0bd9092f088268e
+  StackAnalytics: 42307f033e611586dab85081731e1b639327e738
+  StackConsentManager: 7a21967bc92ebc8bdb0e03e3e41f9536ccadf87f
+  StackIAB: 1bb11e7657fbae0146bd6a4be4bfe72c032a7a52
+  StackModules: cd6a5b810418cc8eb9c0c426f0cf564b3b83aeec
+  StackProtobuf: 6f25d1f149f12f58863918deb733b0e3b8f96775
+  UnityAds: 7c095394cf4815bb607db6b98de86b06b068cb51
+  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  VungleAds: f3bc7f1109c56e455777999661faedbb7c01483f
+  webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
+  YandexMobileAds: 3d7708df615f92815a3acedf9869da46d0b4d65e
+  YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
+
+PODFILE CHECKSUM: 02c5c947992d0c757a0925fe3fe6c262dad9647d
+
+COCOAPODS: 1.15.2
