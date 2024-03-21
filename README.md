@@ -5,7 +5,7 @@
 
 ## Задача
 Необходимо добавить анимацию на игровое поле. Анимация должна отображаться до того момента как слово угадают.
-![Screen](https://github.com/imakarov/olympian-flutter-test/blob/master/test-flutter.png)
+[Screen как должно выглядеть](https://github.com/imakarov/olympian-flutter-test/blob/master/test-flutter.png)
 
 ## Что сделать:
 1. Развернуть приложение на локальном окружении, запустить на ios в эмуляторе или реальном устройстве. После установке при нажатии на кнопку Play вы должны оказаться на экране с 3мя дощечками.
@@ -24,4 +24,5 @@
 
 ## Ссылки:
 1. [Lottie Animation](https://raw.githubusercontent.com/imakarov/olympian-flutter-test/master/Animation.json)
-2. [GitHub](https://github.com/imakarov/olympian_flutter_test)
+2. [Preview Lottie Animation](https://app.lottiefiles.com/preview)
+3. [GitHub](https://github.com/imakarov/olympian_flutter_test)
