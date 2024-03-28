@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../viewmodels/game_viewmodel.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
+import '../models/word_model.dart';
 import '../styles.dart';
+import '../utils/ext.dart';
+import '../viewmodels/game_viewmodel.dart';
 import 'image_dialog.dart';
 import 'shake.dart';
-import '../utils/ext.dart';
-import '../models/word_model.dart';
-import 'wrong_answer_dialog.dart';
 
 // ignore: constant_identifier_names
 const ANIMATION_DURATION = 100;
@@ -33,6 +33,7 @@ class _WordItemState extends State<WordItem> {
   late FocusNode _wordFocusNode;
   bool showLeftLeaf = false;
   final _shakeKey = GlobalKey<ShakeAnimationState>();
+  late GameViewModel _gameViewModel;
 
   @override
   void initState() {
@@ -41,9 +42,9 @@ class _WordItemState extends State<WordItem> {
 
     _wordFocusNode.addListener(() {
       context.read<GameViewModel>().wordFocus(
-        word: widget.word,
-        focus: _wordFocusNode.hasFocus,
-      );
+            word: widget.word,
+            focus: _wordFocusNode.hasFocus,
+          );
 
       if (!_wordFocusNode.hasFocus) {
         context.read<GameViewModel>().clearActiveWord();
@@ -66,8 +67,7 @@ class _WordItemState extends State<WordItem> {
           onShow: () {
             _wordFocusNode.unfocus();
             _textController.clear();
-          }
-      );
+          });
     }
   }
 
@@ -81,6 +81,8 @@ class _WordItemState extends State<WordItem> {
     }
 
     final _isCorrectWordLong = widget.word.word.length > 10;
+
+    _gameViewModel = context.read<GameViewModel>();
 
     return ExcludeSemantics(
       child: ShakeAnimation(
@@ -108,8 +110,7 @@ class _WordItemState extends State<WordItem> {
                       widget.word.word.capitalize(),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: ThemeText.wordItemCorrect.merge(
-                          TextStyle(fontSize: _isCorrectWordLong ? 12 : 16)),
+                      style: ThemeText.wordItemCorrect.merge(TextStyle(fontSize: _isCorrectWordLong ? 12 : 16)),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -137,9 +138,28 @@ class _WordItemState extends State<WordItem> {
                         ),
                       );
                     },
-                    child: const SizedBox(
+                    child: SizedBox(
                       height: 48,
-                      child: Text(''),
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          //анимация руки
+                          if (showHand)
+                            Positioned(
+                              right: 0,
+                              left: 30,
+                              child: Lottie.asset(
+                                'assets/lottie_animations/moving_hand_lottie.json',
+                                height: 110,
+                                width: 120,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          const Positioned.fill(
+                            child: Text(''),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 )
@@ -158,14 +178,10 @@ class _WordItemState extends State<WordItem> {
                     onTap: wrongAnswer,
                     textAlign: TextAlign.center,
                     scrollPadding: const EdgeInsets.only(bottom: 80),
-                    style: widget.word.state == WordState.correct
-                        ? ThemeText.wordItemCorrect
-                        : ThemeText.wordItemInput,
+                    style: widget.word.state == WordState.correct ? ThemeText.wordItemCorrect : ThemeText.wordItemInput,
                     onSubmitted: (value) {
                       final vm = context.read<GameViewModel>();
-                      if (!vm.checkWord(
-                              word: widget.word, value: value, ctx: context) &&
-                          value.isNotEmpty) {
+                      if (!vm.checkWord(word: widget.word, value: value, ctx: context) && value.isNotEmpty) {
                         _textController.clear();
                         _wordFocusNode.requestFocus();
                         _shakeKey.currentState?.shake();
@@ -180,12 +196,18 @@ class _WordItemState extends State<WordItem> {
                       border: InputBorder.none,
                     ),
                   ),
-                )
+                ),
           ],
         ),
       ),
     );
   }
+
+  //проверка первого уровня, первого слова и отгадал ли
+  bool get showHand =>
+      _gameViewModel.levels.first.id == _gameViewModel.activeLevel.id &&
+      _gameViewModel.groups.first.first.hashCode == widget.word.hashCode &&
+      widget.word.state != WordState.correct;
 
   List<Widget> _buildFirstLeaf() {
     List<Widget> items = [];

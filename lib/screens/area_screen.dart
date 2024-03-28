@@ -1,15 +1,16 @@
 import 'dart:math';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../services/notification_service.dart';
 import '../utils/physics.dart';
 import '../viewmodels/game_viewmodel.dart';
 import '../widgets/base_scaffold.dart';
+import '../widgets/help_button.dart';
 import '../widgets/score_bar.dart';
 import '../widgets/word_item.dart';
-import '../widgets/help_button.dart';
-import '../services/notification_service.dart';
 
 class AreaScreen extends StatelessWidget {
   const AreaScreen({Key? key}) : super(key: key);
@@ -26,24 +27,23 @@ class AreaScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             HelpButton(
-              helpText: vm.isLastWord()
-                  ? 'Открыть случайное слово. Нельзя открыть последнее слово'
-                  : 'Открыть случайное слово. Уберите курсор из ячейки',
+              helpText:
+                  vm.isLastWord() ? 'Открыть случайное слово. Нельзя открыть последнее слово' : 'Открыть случайное слово. Уберите курсор из ячейки',
             ),
             HelpButton(
               word: true,
-              helpText: vm.isLastWord()
-                  ? 'Открыть выбранное слово. Нельзя открыть последнее слово'
-                  : 'Открыть выбранное слово. Выберете ячейку',
+              helpText: vm.isLastWord() ? 'Открыть выбранное слово. Нельзя открыть последнее слово' : 'Открыть выбранное слово. Выберете ячейку',
             ),
-            const SizedBox(height: 66,),
+            const SizedBox(
+              height: 66,
+            ),
           ],
         ),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
           toolbarHeight: 76.0,
-          flexibleSpace: ScoreBar(
+          flexibleSpace: const ScoreBar(
             withPadding: true,
             showLevel: true,
             prevScreen: 'Level',
@@ -55,7 +55,7 @@ class AreaScreen extends StatelessWidget {
             FocusScope.of(context).requestFocus(FocusNode());
             vm.clearActiveWord();
           },
-          child: const _NestedScroll(),
+          child: _NestedScroll(context),
         ),
       ),
     );
@@ -63,7 +63,9 @@ class AreaScreen extends StatelessWidget {
 }
 
 class _NestedScroll extends StatefulWidget {
-  const _NestedScroll({Key? key}) : super(key: key);
+  //Беру context parent виджета чтобы использовать высоту который отнимает SafeArea
+  final BuildContext parentContext;
+  const _NestedScroll(this.parentContext, {Key? key}) : super(key: key);
 
   @override
   __NestedScrollState createState() => __NestedScrollState();
@@ -73,8 +75,8 @@ class __NestedScrollState extends State<_NestedScroll> {
   final dataKey = GlobalKey();
   late final ScrollController _scrollCtrl;
   double widthOffset = 0.0;
-  double wordWidth = 160.0;
-  double itemHeight = 66.0;
+  final double wordWidth = 160.0;
+  final double itemHeight = 66.0;
 
   @override
   void initState() {
@@ -88,7 +90,9 @@ class __NestedScrollState extends State<_NestedScroll> {
 
   _ensureScroll(BuildContext ctx) async {
     await Future.delayed(const Duration(milliseconds: 500));
-    ctx.read<GameViewModel>().scrollToWidget();
+    if (ctx.mounted) {
+      ctx.read<GameViewModel>().scrollToWidget();
+    }
   }
 
   @override
@@ -123,26 +127,26 @@ class __NestedScrollState extends State<_NestedScroll> {
                     return Container(
                       height: (itemCounts + 1) * itemHeight,
                       constraints: BoxConstraints(
-                        minHeight: MediaQuery.of(context).size.height - 70,
+                        //Если не убрать высоту SafeArea, у Container лишняя высота
+                        minHeight: MediaQuery.of(context).size.height - 76 - MediaQuery.paddingOf(widget.parentContext).top,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        //Column снизу вверх для того чтобы lottie анимация не стояла сзади второго виджета
+                        verticalDirection: VerticalDirection.up,
                         children: [
-                          ...group.map((word) {
-                            final key =
-                                word == vm.scrollableWord ? dataKey : null;
+                          //сделал список наоборот потому что Column который использует этот список тоже наоборот
+                          ...group.reversed.map((word) {
+                            final key = word == vm.scrollableWord ? dataKey : null;
                             if (key != null) {
                               vm.scrollKey = key;
                             }
-                            final showEndLeaf =
-                                (widthOffset / wordWidth).floor() <= index;
-                            final showStartLeaf =
-                                (widthOffset / wordWidth).floor() == index;
+                            final showEndLeaf = (widthOffset / wordWidth).floor() <= index;
+                            final showStartLeaf = (widthOffset / wordWidth).floor() == index;
                             return AnimatedBuilder(
                               animation: _scrollCtrl,
                               builder: (context, child) {
-                                final page =
-                                    max((widthOffset / wordWidth).floor(), 0);
+                                final page = max((widthOffset / wordWidth).floor(), 0);
                                 final position = _recalculateOffset(
                                   maxItems: groups[page].length,
                                   depth: word.depth,
@@ -168,9 +172,9 @@ class __NestedScrollState extends State<_NestedScroll> {
                               ),
                             );
                           }).toList(),
-                          Container(
-                            height: 66,
-                          ),
+                          // Container(
+                          //   height: 66,
+                          // ),
                         ],
                       ),
                     );
@@ -187,10 +191,7 @@ class __NestedScrollState extends State<_NestedScroll> {
             child: Container(
               height: 40,
               decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [Colors.transparent, Colors.black87]),
+                gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Colors.transparent, Colors.black87]),
               ),
             ),
           ),
@@ -200,11 +201,7 @@ class __NestedScrollState extends State<_NestedScroll> {
             right: 10,
             child: Center(
               child: AnimatedSmoothIndicator(
-                activeIndex: max(
-                    ((_scrollCtrl.hasClients ? _scrollCtrl.offset : 0) /
-                            wordWidth)
-                        .floor(),
-                    0),
+                activeIndex: max(((_scrollCtrl.hasClients ? _scrollCtrl.offset : 0) / wordWidth).floor(), 0),
                 count: groups.length,
                 effect: const ExpandingDotsEffect(
                   dotWidth: 12,

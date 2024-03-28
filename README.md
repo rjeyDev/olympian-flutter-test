@@ -20,9 +20,28 @@
 
 ## Как выполнять?
 1. Вы можете форкнуть этот репозиторий или клонировать к себе его код
-2. После выполнения задания отправляйте ссылку на ваш репозиторий в телеграм [@makarovilya](https://t.me/makarovilya) 
+2. После выполнения задания отправляйте ссылку на ваш репозиторий в телеграм [@makarovilya](https://t.me/makarovilya)
 
 ## Ссылки:
 1. [Lottie Animation](https://raw.githubusercontent.com/imakarov/olympian-flutter-test/master/Animation.json)
 2. [Preview Lottie Animation](https://app.lottiefiles.com/preview)
 3. [GitHub](https://github.com/imakarov/olympian_flutter_test)
+
+
+## Решение задачи
+1. Добавил проверку видимости руки: первого уровня, первого слова и отгадал ли
+   bool get showHand =>
+   _gameViewModel.levels.first.id == _gameViewModel.activeLevel.id &&
+   _gameViewModel.groups.first.first.hashCode == widget.word.hashCode &&
+   widget.word.state != WordState.correct;
+
+2. Добавил lottie анимацию поверх первого слова. Изменил Column -> verticalDirection = VerticalDirection.up, чтобы рука не осталась позади второго слова. Перевернул список слов наоборот потому что verticalDirection снизу вверх
+
+## Дополнительное задание
+
+1. Исправил бы build методы Stateful виджетов, потому что внутри метода много переменных всё время заново присваиваются. И это приводит к оверлоаду
+2. Вывел бы цвета которые используются в отдельных ThemeColor, в случае редизайна можно сэкономить время
+4. Добавил бы Depedency Injection (get_it), для использования сервисов глобально. Еще лучше сразу добавить некоторые пакеты, чтобы потом не пришлось рефакторить кучу кода.
+    - DI: get_it
+    - Localization: easy_localization (пока временно использовать русский, если придется добавить новый тогда придется только добавить файл с переводом)
+    - Navigation: auto_route
